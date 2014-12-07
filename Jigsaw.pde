@@ -189,3 +189,4 @@ void drawFraction(PImage image,           // テクスチャ
   endShape(CLOSE);
   popMatrix();
 }
+
