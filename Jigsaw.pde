@@ -16,7 +16,7 @@ void setup() {
   PImage img  = loadImage("img.png");
   PImage img2 = loadImage("img2.png");
   
-  transition = new Mosaic(img, img2, g_Direction);
+  transition = new Mosaic2(img, img2, g_Direction);
 }
 
 void draw() {
@@ -103,7 +103,7 @@ class Mosaic2 extends Transition {
 
     translate(-0.5 * width, -0.5*height, 500);
 
-    drawDividedImage(prev, 20, 20);
+    drawDividedImage(prev, 20, 25);
     
     popMatrix();
 
@@ -126,7 +126,7 @@ void drawDividedImage(PImage image,
   float horizontalSize = (float)width  / numHorizontalFractions;
 
   noStroke();
-  for(int i = 0; i < numVerticalFractions; ++i) {
+  for(int i = 0; i < numHorizontalFractions; ++i) {
     for(int j = 0; j < numVerticalFractions; ++j) {
       float x = i * horizontalSize;
       float y = j * verticalSize;
